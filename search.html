@@ -48,22 +48,32 @@
                 </div>
         </header>
         <main class="page">
-            <section class="page__search search">
-                <div class="search__container">
-                    <div class="search__body">
-                        <div class="search__text">
-                            <h3>Проверить наличие организации в Реестре благонадёжных и социально-значимых предприятий</h3>
+            <section class="page__scan scan">
+                <div class="scan__container">
+                    <div class="scan__body">
+                        <div class="scan__body-result">
+                            <h2>Поиск в реестре</h2>
+                            <p><span>Результат:</span>  Не найдено</p>
                         </div>
-                        <div class="search__form">
-                            <form action="#" method="get">
-                                <input tabindex="1" placeholder="Введите БИН" type="text" name="BIN" value="" class="search__form-input">
-                                <button tabindex="2" type="submit" class="search__btn">Поиск</button>
-                            </form>
+                        <div class="scan__body-solution solution">
+                            <p class="solution__text">Варианты решения:</p>
+                            <ul class="solution__list">
+                                <li class="solution__item">Проверьте правильность введенных данных</li>
+                                <li class="solution__item">Введите БИН или название организации</li>
+                                <li class="solution__item">Обратитесь к нашему специалисту</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="search__image">
-                        <div class="search__image-item">
-                            <img src="./img/search/MacStudio.svg" alt="MacStudio_img">
+                    <div class="scan__form">
+                        <div class="scan__title">
+                            <img src="./img/scan/loupe1.svg" alt="loupe_img">
+                            <h2>Найти другую организацию</h2>
+                        </div>
+                        <div class="scan__form-body">
+                            <form class="scan__form-item" action="#" method="get">
+                                <input tabindex="1" placeholder="БИН или название компании" type="text" name="BIN2" value="" class="scan__form-input">
+                                <button tabindex="2" type="submit" class="scan__btn">Искать</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -132,7 +142,7 @@
                     </div>
                     <div class="body-footer__column">
                         <div class="footer__reward">
-                            <img src="./img/footer/reward.svg" alt="reward_img" srcset="">
+                            <img src="./img/footer/reward.svg" alt="" srcset="">
                         </div>
                     </div>
                 </div>
