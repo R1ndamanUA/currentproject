@@ -331,11 +331,13 @@ body.lock {
 .lang_option {
   margin-bottom: 10px;
   display: flex;
+  transition: all 0.3s ease 0s;
 }
 .lang_option:hover {
   cursor: pointer;
   color: blue;
   font-size: 16px;
+  transition: all 0.3s ease 0s;
 }
 
 .lang_option:last-child {
