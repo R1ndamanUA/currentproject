@@ -593,6 +593,11 @@ body {
   background: #081f62;
   border-radius: 0px 3.67756px 3.67756px 0px;
   margin-left: -5px;
+  transition: all 0.3s ease 0s;
+}
+.search__btn:hover {
+  background: #0c2f97;
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 989.98px) {
   .search__btn {
