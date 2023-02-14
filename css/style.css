@@ -116,6 +116,9 @@ body {
   font-weight: 400;
   color: #ffffff;
 }
+body.lock {
+  overflow: hidden;
+}
 
 .wrapper {
   min-height: 100%;
