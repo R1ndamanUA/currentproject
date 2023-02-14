@@ -459,6 +459,11 @@ body {
   font-size: 15px;
   line-height: 180%; /* 27/15 */
 }
+@media (max-width: 767.8px) {
+  .adress-footer__link {
+    text-align: right;
+  }
+}
 .adress-footer__link a {
   color: #ffffff;
 }
