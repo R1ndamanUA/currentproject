@@ -40,11 +40,7 @@ body {
 // header ======================================
 .header {
     background: #0e1e5e;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 50;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     &__body {
         display: flex;
@@ -197,6 +193,9 @@ body {
 }
 .lang_current {
     position: relative;
+    @media (max-width: 767.8px) {
+        font-size: 18px;
+    }
 }
 .lang_current:after {
     content: "";
@@ -234,10 +233,14 @@ body {
     margin-bottom: 10px;
     display: flex;
     transition: all 0.3s ease 0s;
+    @media (max-width: 767.8px) {
+        font-size: 18px;
+    }
     &:hover {
         cursor: pointer;
         color: blue;
-        font-size: 16px;
+        // font-size: 16px;
+        scale: 1.1;
         transition: all 0.3s ease 0s;
     }
 }
@@ -274,11 +277,6 @@ body {
         padding-top: 30px;
         @media (max-width: 929.8px) {
             display: none;
-        }
-        transition: all 1s ease 0s;
-        &:hover {
-            transform: rotate(720deg);
-            transition: all 1s ease 0s;
         }
     }
 
@@ -319,7 +317,7 @@ body {
         line-height: 175%; /* 28/16 */
         padding-top: 27px;
         @media (max-width: 767.8px) {
-            text-align: center;
+            display: none;
         }
     }
 }
@@ -349,8 +347,11 @@ body {
 
     &__link {
         font-size: 15px;
-        line-height: 18px;
+        line-height: 120%; /* 18/15 */
         color: #ffffff;
+        @media (max-width: 767.8px) {
+            font-size: 17px;
+        }
         &:hover {
             text-decoration: underline;
         }
@@ -363,7 +364,7 @@ body {
 .contacts-footer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     & a {
         &:hover {
             text-decoration: underline;
@@ -388,14 +389,29 @@ body {
 .phone-footer {
     gap: 50px;
     justify-content: space-between;
+    @media (max-width: 767.8px) {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
     &__text {
         font-size: 15px;
         line-height: 180%; /* 27/15 */
+        @media (max-width: 767.8px) {
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+        }
     }
 
     &__link {
         font-size: 16px;
         line-height: 175%; /* 28/16 */
+        @media (max-width: 767.8px) {
+            text-align: center;
+            width: 100%;
+            font-size: 17px;
+        }
+
         & a {
             color: #ffffff;
         }
@@ -404,9 +420,18 @@ body {
 .adress-footer {
     gap: 50px;
     justify-content: space-between;
+    @media (max-width: 767.8px) {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
     &__text {
         font-size: 14px;
         line-height: 200%; /* 28/14 */
+        @media (max-width: 767.8px) {
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+        }
     }
 
     &__link {
@@ -414,7 +439,9 @@ body {
         font-size: 15px;
         line-height: 180%; /* 27/15 */
         @media (max-width: 767.8px) {
-            text-align: right;
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
         }
         & a {
             color: #ffffff;
@@ -424,14 +451,28 @@ body {
 .email-footer {
     gap: 50px;
     justify-content: space-between;
+    @media (max-width: 767.8px) {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
     &__text {
         font-size: 15px;
         line-height: 180%; /* 27/15 */
+        @media (max-width: 767.8px) {
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+        }
     }
 
     &__link {
         font-size: 16px;
         line-height: 175%; /* 28/16 */
+        @media (max-width: 767.8px) {
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+        }
         & a {
             color: #ffffff;
         }
@@ -440,14 +481,28 @@ body {
 .emailforsmi-footer {
     gap: 50px;
     justify-content: space-between;
+    @media (max-width: 767.8px) {
+        flex-wrap: wrap;
+        gap: 0px;
+    }
     &__text {
         font-size: 16px;
         line-height: 175%; /* 28/16 */
+        @media (max-width: 767.8px) {
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+        }
     }
 
     &__link {
         font-size: 16px;
         line-height: 175%; /* 28/16 */
+        @media (max-width: 767.8px) {
+            width: 100%;
+            text-align: center;
+            font-size: 17px;
+        }
         & a {
             color: #ffffff;
         }
@@ -457,14 +512,14 @@ body {
 .page {
     background: #eff1f6;
     &__search {
-        margin-top: 166px;
+        margin-top: 50px;
         margin-bottom: 61px;
         @media (max-width: 767.98px) {
-            margin-top: 100px;
+            margin-top: 30px;
             margin-bottom: 0px;
         }
         @media (max-width: 1023.98px) {
-            margin-top: 130px;
+            margin-top: 40px;
             margin-bottom: 10px;
         }
     }
@@ -512,13 +567,17 @@ body {
     }
 
     &__form {
-        display: flex;
+        // display: flex;
     }
     &__form-input {
         background: #ffffff;
         border: 0.91939px solid #92918f;
         border-radius: 3.67756px 0px 0px 3.67756px;
         padding: 12px 18px 13px;
+        width: 58%;
+        @media (max-width: 1199.98px) {
+            width: 50%;
+        }
         @media (max-width: 989.98px) {
             width: 100%;
             border-radius: 3.67756px;
@@ -555,6 +614,7 @@ body {
     &__image {
         @media (max-width: 767.98px) {
             margin: 0 auto;
+            margin-top: 20px;
         }
     }
 
@@ -570,14 +630,14 @@ body {
 .page {
     background: #eff1f6;
     &__scan {
-        margin-top: 166px;
+        margin-top: 50px;
         margin-bottom: 61px;
         @media (max-width: 767.98px) {
-            margin-top: 100px;
+            margin-top: 30px;
             margin-bottom: 0px;
         }
         @media (max-width: 1023.98px) {
-            margin-top: 130px;
+            margin-top: 40px;
             margin-bottom: 10px;
         }
     }
@@ -615,7 +675,7 @@ body {
             padding-bottom: 15px;
         }
         & p {
-            font-weight: 500;
+            font-weight: 400;
             font-size: 18px;
             line-height: 122.222222%; /* 22/18 */
             color: #000000;
