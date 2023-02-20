@@ -225,6 +225,7 @@ body.lock {
     height: 100%;
     background: rgba(14, 30, 94, 0.9);
     padding: 120px 10px 20px 10px;
+    z-index: 2;
   }
 }
 .header__menu.active {
@@ -1254,6 +1255,11 @@ body.lock {
 .information__oked {
   display: flex;
 }
+@media (max-width: 767.98px) {
+  .information__oked {
+    flex-direction: column;
+  }
+}
 
 .request {
   padding: 28px 34px;
@@ -1659,7 +1665,7 @@ body.lock {
 }
 .table__row {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   box-shadow: 0px 2.9434px 2.9434px rgba(146, 145, 143, 0.24);
   gap: 4px;
 }
