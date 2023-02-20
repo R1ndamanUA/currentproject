@@ -1870,6 +1870,13 @@ body.lock {
   flex-direction: column;
   justify-content: space-between;
   gap: 8px;
+  transition: all 0.3s ease 0s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  padding: 5px;
+}
+.news-page__item:hover {
+  scale: 1.05;
+  transition: all 0.3s ease 0s;
 }
 @media (max-width: 767.98px) {
   .news-page__item {
@@ -1884,7 +1891,6 @@ body.lock {
   transition: all 0.3s ease 0s;
 }
 .news-page__item-image:hover {
-  scale: 1.05;
   transition: all 0.3s ease 0s;
 }
 .news-page__item-image img {
