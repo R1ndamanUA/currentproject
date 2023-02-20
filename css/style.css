@@ -1256,6 +1256,11 @@ body.lock {
 .information__oked {
   display: flex;
 }
+@media (max-width: 767.98px) {
+  .information__oked {
+    flex-direction: column;
+  }
+}
 
 .request {
   padding: 28px 34px;
@@ -1965,6 +1970,65 @@ body.lock {
 }
 .pagination p {
   font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #081f62;
+}
+
+.results-title__container {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #92918f;
+  padding-left: 35px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .oked__text-search-result {
+    flex: 0 0 180px;
+  }
+}
+
+.search-results {
+  background: #fbfbfb;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 25px 35px;
+}
+@media (max-width: 768px) {
+  .search-results {
+    padding: 25px 15px;
+  }
+}
+
+.mb0 {
+  margin-bottom: 0px;
+}
+
+.pl35 {
+  padding-left: 35px;
+}
+
+@media (min-width: 768px) {
+  .fl180 {
+    flex: 0 0 180px;
+  }
+}
+
+.results__container {
+  padding-top: 0px;
+}
+
+.fdc10 {
+  row-gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.company-name__results a {
+  font-weight: 700;
   font-size: 16px;
   line-height: 19px;
   color: #081f62;
