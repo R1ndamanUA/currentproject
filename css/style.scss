@@ -1202,7 +1202,7 @@ body {
 }
 .request {
     padding: 28px 34px;
-    background-image: url(../img/sidebar/reward_bg.jpg);
+    background-image: url(../img/sidebar/reward_bg.webp);
     background-size: cover;
     margin-top: 15px;
     &__title {
@@ -1427,7 +1427,7 @@ body {
     }
 
     &__content {
-        background-image: url(../img/sidebar/reward_bg.jpg);
+        background-image: url(../img/sidebar/reward_bg.webp);
         max-width: 491px;
         padding: 46px 46px 27px;
         display: flex;
@@ -2091,7 +2091,7 @@ body {
         padding: 3% 50px;
         display: flex;
         flex-direction: column;
-        background: url("../img/popup/bg.jpg") 0 no-repeat;
+        background: url("../img/popup/bg.webp") 0 no-repeat;
         justify-content: center;
         @media (max-width: 767.98px) {
             padding: 3% 50px;
