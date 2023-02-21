@@ -659,7 +659,7 @@ body.lock {
 
 .search__container {
   display: flex;
-  padding: 52px 64px 58px;
+  padding: 25px 64px 25px;
   background: #fbfbfb;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
   border-radius: 4px;
@@ -673,6 +673,9 @@ body.lock {
 .search__body {
   flex: 1 1 50%;
   padding-right: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 @media (max-width: 1199.98px) {
   .search__body {
@@ -759,6 +762,8 @@ body.lock {
 }
 .search__image-item img {
   max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .scan-title__container {
@@ -1682,7 +1687,7 @@ body.lock {
 }
 .table__row {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   box-shadow: 0px 2.9434px 2.9434px rgba(146, 145, 143, 0.24);
   gap: 4px;
 }

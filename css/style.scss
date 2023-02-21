@@ -539,7 +539,7 @@ body {
 .search {
     &__container {
         display: flex;
-        padding: 52px 64px 58px;
+        padding: 25px 64px 25px;
         background: #fbfbfb;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
         border-radius: 4px;
@@ -552,6 +552,9 @@ body {
     &__body {
         flex: 1 1 50%;
         padding-right: 120px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
         @media (max-width: 1199.98px) {
             padding-right: 65px;
         }
@@ -633,23 +636,42 @@ body {
     &__image-item {
         & img {
             max-width: 100%;
+            object-fit: cover;
         }
     }
 }
 
 // Scan page ================================================
+.scan-title__container {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding-left: 43px;
+    @media (max-width: 989.98px) {
+        padding-left: 57px;
+    }
+    @media (max-width: 767.98px) {
+        padding-left: 26px;
+    }
+    @media (max-width: 449.98px) {
+        padding-left: 10px;
+    }
+    & h2 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 130%; /* 26/20 */
+        color: #92918f;
+    }
+}
 
 .page {
     background: #eff1f6;
     &__scan {
-        margin-top: 50px;
+        // margin-top: 50px;
         margin-bottom: 61px;
         @media (max-width: 767.98px) {
-            margin-top: 30px;
             margin-bottom: 0px;
         }
         @media (max-width: 1023.98px) {
-            margin-top: 40px;
             margin-bottom: 10px;
         }
     }
@@ -679,13 +701,6 @@ body {
 
     &__body-result {
         padding-bottom: 20px;
-        & h2 {
-            font-weight: 600;
-            font-size: 22px;
-            line-height: 118%;
-            color: #081f62;
-            padding-bottom: 15px;
-        }
         & p {
             font-weight: 400;
             font-size: 18px;
@@ -1576,7 +1591,7 @@ body {
 
     &__row {
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         box-shadow: 0px 2.9434px 2.9434px rgba(146, 145, 143, 0.24);
         gap: 4px;
         .table__cell.table__cell-indicators-wrap {
