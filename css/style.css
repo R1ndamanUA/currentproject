@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*Обнуление*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -89,6 +88,41 @@ h6 {
 }
 
 /*--------------------*/
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-Bold.woff);
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-ExtraBold.woff);
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-Medium.woff);
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-Regular.woff);
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/Inter-SemiBold.woff);
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
 [class*=__container] {
   max-width: 1170px;
   margin: 0 auto;
