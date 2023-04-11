@@ -2372,12 +2372,13 @@ body {
         font-size: 18px;
         line-height: 150%;
         color: #141414;
-        padding-bottom: 24px;
     }
 
     &__email {
         font-size: 18px;
         line-height: 150%;
         color: #141414;
+        display: inline-block;
+        margin-top: 24px;
     }
 }
