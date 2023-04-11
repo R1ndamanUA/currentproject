@@ -2461,3 +2461,6 @@ body.lock {
   display: inline-block;
   margin-top: 24px;
 }
+.contacts-managers__email:hover {
+  text-decoration: underline;
+}
