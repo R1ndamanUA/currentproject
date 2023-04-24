@@ -2787,6 +2787,7 @@ body.lock {
   font-size: 16px;
   line-height: 150%;
   color: #141414;
+  text-align: justify;
 }
 .about-project__image {
   flex-basis: 50%;
