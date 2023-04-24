@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1439px" height="750px" viewBox="0 0 1439 750" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>wave</title>
+    <defs>
+        <linearGradient x1="100%" y1="50%" x2="-0.576145388%" y2="50%" id="linearGradient-1">
+            <stop offset='0' stop-color='rgba(51, 153, 255, 0.85)'>
+            <animate attributeName="stop-color"
+               values="rgba(51, 153, 255, 0.85); rgba(91, 21, 183, 0.7); rgba(0, 51, 153, 0.75); rgba(0, 127, 118, 0.7); rgba(51, 153, 255, 0.85);" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='.5' stop-color='rgba(91, 21, 183, 0.7);'>
+            <animate attributeName="stop-color"
+               values="rgba(91, 21, 183, 0.7); rgba(0, 51, 153, 0.75); rgba(0, 127, 118, 0.7); rgba(51, 153, 255, 0.85); rgba(91, 21, 183, 0.7);" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='1' stop-color='rgba(0, 51, 153, 0.75);'>
+            <animate attributeName="stop-color"
+               values="rgba(0, 51, 153, 0.75); rgba(0, 127, 118, 0.7); rgba(51, 153, 255, 0.85); rgba(91, 21, 183, 0.7); rgba(0, 51, 153, 0.75);" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5"
+            dur="20s" repeatCount="indefinite" />
+        </linearGradient>
+        <linearGradient x1="100%" y1="50%" x2="-0.576145388%" y2="50%" id="linearGradient-2">
+            <stop offset='0' stop-color='rgba(51, 153, 255, 0.85);'>
+            <animate attributeName="stop-color"
+               values="rgba(51, 153, 255, 0.85); rgba(91, 21, 183, 0.7); rgba(0, 51, 153, 0.75); rgba(51, 153, 255, 0.85);" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <stop offset='1' stop-color='rgba(51, 153, 255, 0.85);' stop-opacity="0">
+            <animate attributeName="stop-color"
+               values="rgba(0, 51, 153, 0.75); rgba(51, 153, 255, 0.85); rgba(51, 153, 255, 0.85); rgba(0, 51, 153, 0.75);" dur="20s" repeatCount="indefinite">
+            </animate>
+         </stop>
+         <animateTransform attributeName="gradientTransform" type="rotate" values="360 .5 .5;0 .5 .5" class="ignore"
+            dur="10s" repeatCount="indefinite" />
+        </linearGradient>
+    </defs>
+    <g id="wawe" fill="url(#linearGradient-1)">
+        <path d="M450,603.27c150,4.85,300,88.31,450,124.22s300,26.2,450-10.38c29.86-7.21,59.73-15.45,89-24.26V0H0V743l75-36.2C150,670.23,300,598.41,450,603.27Z" id="Bg-1"></path>
+    </g>
+    <g id="wawe" fill="url(#linearGradient-2)">
+        <path d="M450,603.27c150,4.85,300,88.31,450,124.22s300,26.2,450-10.38c29.86-7.21,59.73-15.45,89-24.26V0H0V743l75-36.2C150,670.23,300,598.41,450,603.27Z" id="Bg-1"></path>
+    </g>
+</svg>

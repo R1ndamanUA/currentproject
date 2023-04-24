@@ -11,12 +11,13 @@
     <meta name="Copyright" content="R1ndaman">
     <meta name="Address" content="lesnika95@gmail.com">
     <title>NIAC</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css" integrity="sha512-uvXdJud8WaOlQFjlz9B15Yy2Au/bMAvz79F7Xa6OakCl2jvQPdHD0hb3dEqZRdSwG4/sknePXlE7GiarwA/9Wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header id="header" class="header header--fix">
             <div class="header__container">
                 <div class="header__body">
                     <div class="header__logo">
@@ -31,40 +32,239 @@
                             <li class="menu__item"><a href="https://niac.kz/about-us" class="menu__link">О проекте</a></li>
                             <li class="menu__item"><a href="https://niac.kz/registers" class="menu__link">Реестры</a></li>
                             <li class="menu__item"><a href="https://niac.kz/nominations" class="menu__link">Номинации</a></li>
-                            <li class="menu__item"><a href="https://blog.niac.kz/" class="menu__link">Новости</a></li>
+                            <li class="menu__item"><a href="https://niac.kz/blog" class="menu__link">Новости</a></li>
                             <li class="menu__item"><a href="https://niac.kz/contacts" class="menu__link">Контакты</a></li>
-                            <li class="lang_switcher">
+                            <!-- <li class="lang_switcher">
                                 <a class="lang_current"><span class="fi fi-gb"></span>EN</a>
                                 <div class="lang_wrapper">
                                     <div class="lang_list" hidden>
-                                      <a class="lang_option"><span class="fi fi-ru"></span>RU</a>
-                                      <a class="lang_option"><span class="fi fi-gb"></span>EN</a>
-                                      <a class="lang_option"><span class="fi fi-kz"></span>KZ</a>
+                                    <a class="lang_option"><span class="fi fi-ru"></span>RU</a>
+                                    <a class="lang_option"><span class="fi fi-gb"></span>EN</a>
+                                    <a class="lang_option"><span class="fi fi-kz"></span>KZ</a>
                                     </div>
                                 </div>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
         </header>
-        <main class="page">
-            <section class="page__search search">
-                <div class="search__container">
-                    <div class="search__body">
-                        <div class="search__text">
-                            <h3>Проверить наличие организации в Реестре благонадёжных и социально-значимых предприятий</h3>
+        <main class="main main--p0">
+            <section class="home-screen">
+                <div class="home-screen__container">
+                    <div class="home-screen__title-wrapper">
+                        <div class="home-screen__title">
+                            <h1>ОТРАСЛЕВАЯ АНАЛИТИКА ПРЕДПРИЯТИЙ РЕСПУБЛИКИ КАЗАХСТАН</h1>
                         </div>
-                        <div class="search__form">
-                            <form action="#" method="get">
-                                <input tabindex="1" placeholder="Введите БИН" type="text" name="BIN" value="" class="search__form-input">
-                                <button tabindex="2" type="submit" class="search__btn">Поиск</button>
-                            </form>
+                        <div class="home-screen__reward">
+                            <img src="./img/index/reward.webp" alt="Достояние отрасли 2022">
                         </div>
                     </div>
-                    <div class="search__image">
-                        <div class="search__image-item">
-                            <img src="./img/search/MacStudio3.jpg" alt="MacStudio_img">
+                    <div class="home-screen__bottom-wrapper">
+                        <div class="home-screen__form-wrapper">
+                            <h3>Узнайте оценку показателей Вашей компании
+                                в рамках отраслевого реестра</h3>
+                            <form action="#" method="get">
+                                <input tabindex="1" placeholder="Введите БИН или название компании" type="text" name="BIN" value="" class="search__form-input search__form-input-home-screen">
+                                <button tabindex="2" type="submit" class="search__btn search__btn-home-screen">Поиск</button>
+                             </form>
                         </div>
+                        <div class="home-screen__slider-wrapper">
+                            <!-- Slider main container -->
+                            <div class="home-screen__swiper swiper">
+                                <!-- Additional required wrapper -->
+                                <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                    <div class="home-screen__swiper-slide swiper-slide">
+                                        <p>Информационно-аналитический портал</p>
+                                    </div>
+                                    <div class="home-screen__swiper-slide swiper-slide">
+                                        <p>Публичные отраслевые исследования</p>
+                                    </div>
+                                    <div class="home-screen__swiper-slide swiper-slide">
+                                        <p>Проведение отраслевых номинаций</p>
+                                    </div>
+                                    <div class="home-screen__swiper-slide swiper-slide">
+                                        <p>Информационно-консультационные услуги</p>
+                                    </div>
+                                    <div class="home-screen__swiper-slide swiper-slide">
+                                        <p>Экспертная оценка предприятий</p>
+                                    </div>
+                                    <div class="home-screen__swiper-slide swiper-slide">
+                                        <p>Региональная аналитика</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev home-screen__slider-prev"></div>
+                            <div class="swiper-button-next home-screen__slider-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-project">
+                <div class="about-project__container">
+                    <div class="about-project__body">
+                        <h2 class="about-project__title">О ПРОЕКТЕ</h2>
+                        <p class="about-project__subtitle">Национальный информационно-аналитический центр</p>
+                        <br>
+                        <p class="about-project__text">Независимый общественный проект, который совместно с организационными партнерами ведет деятельность в области предоставления аналитических услуг, формирования отраслевых реестров надежных партнеров и создания открытого информационного портала.</p>
+                    </div>
+                    <div class="about-project__image">
+                        <img src="./img/index/aboutProject.webp" alt="Девушка за компютером">
+                    </div>
+                </div>
+            </section>
+            <section class="data-sources">
+                <div class="data-sources__container">
+                    <div class="data-sources__title"><h2>ИСТОЧНИКИ ДАННЫХ</h2></div>
+                    <div class="slider">
+                        <div class="slide-track">
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo1.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo2.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo3.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo4.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo5.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo6.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo7.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo8.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                                <img src="./img/index/data-sources/logo9.png" alt="Логотип" />
+                            </div>
+                            <div class="slide">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="big-slider">
+                <div class="big-slider__container">
+                    <div class="big-slider__left-wrapper">
+                        <!-- Slider main container -->
+                        <div class="left-slider__swiper swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                                <div class="left-slider__swiper-slide swiper-slide">
+                                    <img src="./img/index/bigslider/bigslider-leftFoto.webp" alt="Девушка с номинацией">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="big-slider__right-wrapper">
+                        <div class="right-slider__swiper swiper">
+                            <div class="swiper-wrapper">
+                                <div class="right-slider__swiper-slide swiper-slide">
+                                    <h2>Номинация<br>
+                                        “<span>Достояние отрасли</span>”</h2>
+                                        <p>Проводится ежегодно на основании Реестра благонадежных и социально-значимых предприятий страны. <br>
+                                            Номинация призвана определить и отметить социально-значимые организации, эффективные предприятия, лидеров отрасли и надежных партнеров.</p>
+                                        <button>Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev big-slider__prev"></div>
+                        <div class="swiper-button-next big-slider__next"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="slider-carousel">
+                <div class="slider-carousel__container">
+                    <div class="data-sources__title"><h2>ОБЛАДАТЕЛИ ЗВАНИЯ “ДОСТОЯНИЕ ОТРАСЛИ”</h2></div>
+                    <div class="swiper-carousel swiper">
+                        <div class="swiper-wrapper carousel-wrapper">
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                            <div class="swiper-slide__carousel swiper-slide"><img src="./img/index/slider-carousel/image1.webp" alt="Логотип"></div>
+                        </div>
+                    </div>
+                    <div class="swiper-carousel__button-prev"></div>
+                    <div class="swiper-carousel__button-next"></div>
+                </div>
+            </section>
+            <section class="work-in-numbers">
+                <div class="work-in-numbers__container">
+                    <div class="data-sources__title"><h2>НАША РАБОТА В ЦИФРАХ</h2></div>
+                    <div class="work-in-numbers__row">
+                        <div class="work-in-numbers__card">
+                            <dl>
+                                <dt>Всего рассмотрено организаций</dt>
+                                <dd>541 711</dd>
+                            </dl>
+                        </div>
+                        <div class="work-in-numbers__card">
+                            <dl>
+                                <dt>Составлено экспертных оценок предприятий</dt>
+                                <dd>220 868</dd>
+                            </dl>
+                        </div>
+                        <div class="work-in-numbers__card">
+                            <dl>
+                                <dt>Проанализировано видов экономической деятельности</dt>
+                                <dd>994</dd>
+                            </dl>
+                        </div>
+                        <div class="work-in-numbers__card">
+                            <dl>
+                                <dt>Критериев базовой <br> оценки организаций</dt>
+                                <dd>15</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="latest-news">
+                <div class="latest-news__container">
+                    <div class="data-sources__title"><h2>Последние НОВОСТИ</h2></div>
+                    <div class="latest-news__row">
+                        <div class="news-page__item latest-news__item">
+                            <a href=""><div class="news-page__item-image latest-news__item-image"><img src="./img/news/news1.jpg" alt="Картинка новости"></div></a>
+                            <a href=""><div class="news-page__item-title">Проверка делового партнера на благонадежность</div></a>
+                            <div class="news-page__item-date">09.12.2022</div>
+                            <div class="news-page__item-text latest-news__item-text">Эффективность взаимодействия с коммерческим партнером напрямую зависит от его благонадежности и деловой репутации в бизнес среде.</div>
+                            <div class="news-page__item-more latest-news__item-more">
+                                <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="news-page__item latest-news__item">
+                            <a href=""><div class="news-page__item-image latest-news__item-image"><img src="./img/news/news2.jpg" alt="Картинка новости"></div></a>
+                            <a href=""><div class="news-page__item-title">Система мотивации персонала</div></a>
+                            <div class="news-page__item-date">06.11.2022</div>
+                            <div class="news-page__item-text latest-news__item-text">Премирование работников Компании возможно 4 раза в год (квартально) по результатам финансово-хозяйственной деятельности Компании, 1 раз в год за счет экономии фонда</div>
+                            <div class="news-page__item-more latest-news__item-more">
+                                <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="news-page__item latest-news__item">
+                            <a href=""><div class="news-page__item-image latest-news__item-image"><img src="./img/news/news3.jpg" alt="Картинка новости"></div></a>
+                            <a href=""><div class="news-page__item-title">Экономика Казахстана</div></a>
+                            <div class="news-page__item-date">27.09.2022</div>
+                            <div class="news-page__item-text latest-news__item-text">Экономика Казахстана не только является крупнейшей среди стран Центральной Азии, но и каждый год показывает положительные показатели роста. </div>
+                            <div class="news-page__item-more latest-news__item-more">
+                                <a href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more-news-button">
+                        <a href="#">Больше новостей</a>
                     </div>
                 </div>
             </section>
@@ -89,7 +289,7 @@
                                 <li class="menu-footer__item"><a href="https://niac.kz/about-us" class="menu-footer__link">О проекте</a></li>
                                 <li class="menu-footer__item"><a href="https://niac.kz/registers" class="menu-footer__link">Реестры</a></li>
                                 <li class="menu-footer__item"><a href="https://niac.kz/nominations" class="menu-footer__link">Номинации</a></li>
-                                <li class="menu-footer__item"><a href="https://blog.niac.kz/" class="menu-footer__link">Новости</a></li>
+                                <li class="menu-footer__item"><a href="https://niac.kz/blog" class="menu-footer__link">Новости</a></li>
                                 <li class="menu-footer__item"><a href="https://niac.kz/contacts" class="menu-footer__link">Контакты</a></li>
                             </ul>
                         </div>
@@ -101,7 +301,8 @@
                                     <p>Телефон:</p>
                                 </div>
                                 <div class="phone-footer__link">
-                                    <a href="tel:+77755176106">+ 7775 51 761 06</a>
+                                    <a href="tel:+77273104208">+7 (727) 310 42 08</a><br>
+                                    <a href="tel:+77008294030">+7 (700) 829 40 30</a>
                                 </div>
                             </div>
                             <div class="contacts-footer__adress adress-footer">
@@ -117,7 +318,7 @@
                                     <p>E-mail:</p>
                                 </div>
                                 <div class="email-footer__link">
-                                    <a href="mailto:niac@gmail.com">niac@gmail.com</a>
+                                    <a href="mailto:office@niac.kz">office@niac.kz</a>
                                 </div>
                             </div>
                             <div class="contacts-footer__emailforsmi emailforsmi-footer">
@@ -125,14 +326,14 @@
                                     <p>Для СМИ:</p>
                                 </div>
                                 <div class="emailforsmi-footer__link">
-                                    <a href="mailto:PR@email.com">PR@email.com</a>
+                                    <a href="mailto:pr@niac.kz">pr@niac.kz</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="body-footer__column">
                         <div class="footer__reward">
-                            <img src="./img/footer/reward.png" alt="reward_img" srcset="">
+                            <img src="./img/footer/reward.png" alt="" srcset="">
                         </div>
                     </div>
                 </div>
@@ -145,6 +346,7 @@
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

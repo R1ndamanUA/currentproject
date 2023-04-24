@@ -1,22 +1,22 @@
 // header burger =========================
-$(document).ready(function() {
-    $('.header__burger').click(function(event) {
-      $('.header__burger,.header__menu').toggleClass('active');
-      $('body').toggleClass('lock');
-    });
-  });
+$(document).ready(function () {
+	$('.header__burger').click(function (event) {
+		$('.header__burger,.header__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
+});
 
 // lenguage drop menu ======================
-$(document).ready(function() {
-  $('.lang_current').click(function() {
-    $('.lang_list').toggle()
-  });
+$(document).ready(function () {
+	$('.lang_current').click(function () {
+		$('.lang_list').toggle()
+	});
 
-  $(document).mouseup(function (e) {
-    if ($(e.target).closest(".lang_list").length === 0) {
-      $(".lang_list").hide();
-    }
-  });
+	$(document).mouseup(function (e) {
+		if ($(e.target).closest(".lang_list").length === 0) {
+			$(".lang_list").hide();
+		}
+	});
 });
 
 // POPUP ===========================================
@@ -145,61 +145,260 @@ document.addEventListener('keydown', function (e) {
 })();
 
 // ========Grafik================================================================
-const ctx = document.getElementById('myChart');
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['2018', '2019', '2020', '2021', '2022'],
-      datasets: [{
-        label: 'Количества предприятий отрасли',
-        data: [1500000, 2000000, 3000000, 4000000, 5000000],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+// const ctx = document.getElementById('myChart');
+
+// new Chart(ctx, {
+// 	type: 'bar',
+// 	data: {
+// 		labels: ['2018', '2019', '2020', '2021', '2022'],
+// 		datasets: [{
+// 			label: 'Количество предприятий отрасли',
+// 			data: [count__oked_ul18, count__oked_ul19, count__oked_ul20, count__oked_ul21, count__oked_ul22],
+// 			borderWidth: 1
+// 		}]
+// 	},
+// 	options: {
+// 		plugins: {
+// 			legend: {
+// 			  display: false
+// 			},
+// 			title: {
+//                 display: true,
+//                 text: 'Количество предприятий отрасли'
+//             }
+// 		},
+// 		scales: {
+// 			y: {
+// 				beginAtZero: true
+// 			}
+// 		}
+// 	}
+// });
 
 // =============================================================================
-const ctx2 = document.getElementById('myChart2');
+// const ctx2 = document.getElementById('myChart2');
 
-  new Chart(ctx2, {
-    type: 'line',
-    data: {
-      labels: ['2018', '2019', '2020', '2021', '2022'],
-      datasets: [{
-        label: 'Налоговые отчисления отрасли',
-        data: [0, 0, 3000000000, 4000000000, 1500000000],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
+// new Chart(ctx2, {
+// 	type: 'bar',
+// 	data: {
+// 		labels: ['2018', '2019', '2020', '2021', '2022'],
+// 		datasets: [{
+// 			label: 'Количество индивидуальных предпринимателей',
+// 			data: [count__oked_ip18, count__oked_ip19, count__oked_ip20, count__oked_ip21, count__oked_ip22],
+// 			borderWidth: 1,
+// 			borderColor: 'rgb(114, 219, 71)',
+// 			backgroundColor: 'rgba(114, 219, 71, 0.5)'
+// 		}]
+// 	},
+// 	options: {
+// 		plugins: {
+// 			legend: {
+// 			  display: false
+// 			},
+// 			title: {
+//                 display: true,
+//                 text: 'Количество индивидуальных предпринимателей'
+//             }
+// 		},
+// 		scales: {
+// 			y: {
+// 				beginAtZero: true
+// 			}
+// 		}
+// 	}
+// });
 // open extended info ======================================
-$(document).ready(function() {
-  $('.content__more-info-btn').click(function(event) {
-    $('.content__extanded-wrapper').show('open');
-    $('.content__more-info').hide('dn');
-    event.preventDefault();
-  });
+$(document).ready(function () {
+	$('.content__more-info-btn').click(function (event) {
+		$('.content__extanded-wrapper').show('open');
+		$('.content__more-info').hide('dn');
+		event.preventDefault();
+	});
 });
 // close extended info ======================================
-$(document).ready(function() {
-  $('.info-extended__close-btn').click(function(eventClose) {
-    $('.content__extanded-wrapper').hide('open');
-    $('.content__more-info').show('dn');
-    eventClose.preventDefault();
+$(document).ready(function () {
+	$('.info-extended__close-btn').click(function (eventClose) {
+		$('.content__extanded-wrapper').hide('open');
+		$('.content__more-info').show('dn');
+		eventClose.preventDefault();
+	});
+});
+//========TAB================================================================================================================================================
+const tabBtn = document.querySelectorAll(".tab__btn");
+const tabContents = document.querySelectorAll(".tab__item");
+
+tabBtn.forEach(function (element) {
+	element.addEventListener("click", openTabs);
+});
+
+function openTabs(evt) {
+	const btnTarget = evt.currentTarget;
+	const item = btnTarget.dataset.item;
+	var item_0 = btnTarget.dataset.item+'0';
+	tabContents.forEach(function (item) {
+		item.classList.remove("tab__item--active");
+	});
+
+	tabBtn.forEach(function (item) {
+		item.classList.remove("tab__btn--active");
+	});
+
+	document.querySelector(`#${item}`).classList.add("tab__item--active");
+	document.querySelector(`#${item_0}`).classList.add("tab__item--active");
+
+	btnTarget.classList.add("tab__btn--active");
+}
+
+
+$('.popup__button').on('click', function(e){
+    e.preventDefault();
+    var name = $('input[name="popup__name"]').val();
+    var phone = $('input[name="popup__phone"]').val();
+	var link = $('input[name="link"]').val();
+    if($('input[name="popup__name"]').val()){
+      name = $('input[name="popup__name"]').val();
+    }else{
+		name = '-';
+    }
+    if($('input[name="popup__phone"]').val()){
+		phone =$('input[name="popup__phone"]').val();
+    }else{
+		phone = '-';
+    }
+    $.ajax({
+        type: "POST",
+        url: "class/send.php",
+        data: { "name": name, "phone": phone, "bin" : window.location.href.replace('https://results.niac.kz/',''), link: window.location.href},
+        success: function(data) {
+          $('.popup__form')[0].reset();
+          popupClose();
+        }
+    });
   });
+  $('.not-included__button').on('click', function(e){
+    e.preventDefault();
+    var name = $('input[name="not-included__name"]').val();
+    var phone = $('input[name="not-included__phone"]').val();
+	var link = $('input[name="link"]').val();
+    if($('input[name="not-included__name"]').val()){
+      name = $('input[name="not-included__name"]').val();
+    }else{
+		name = '-';
+    }
+    if($('input[name="not-included__phone"]').val()){
+		phone =$('input[name="not-included__phone"]').val();
+    }else{
+		phone = '-';
+    }
+    $.ajax({
+        type: "POST",
+        url: "class/send.php",
+        data: { "name": name, "phone": phone, "bin" : window.location.href.replace('https://results.niac.kz/',''), link: window.location.href},
+        success: function(data) {
+          $('.not-included__form')[0].reset();
+        }
+    });
+  });
+
+$(document).ready(function($){
+var copy_url = document.location.href;
+new Clipboard('.copy_link', {text: function(){ return copy_url;}});
+});
+$(document).ready(function() {
+    $('.fb-share').click(function(e) {
+        e.preventDefault();
+        window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+        return false;
+    });
+});
+
+//=======SWIPER=================================================================================================================================================
+new Swiper('.home-screen__swiper', {
+	navigation: {
+		nextEl: '.home-screen__slider-next',
+		prevEl: '.home-screen__slider-prev'
+		
+	},
+	grabCursor: true,
+	spaceBetween: 26,
+	loop: true,
+	rewind: true,
+	slidesPerView: 3,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		320: {
+			slidesPerView: 2,
+		},
+		540: {
+			slidesPerView: 3,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		1090: {
+			slidesPerView: 3,
+		}
+	},
+	speed: 700,
+});
+
+let sliderOne = new Swiper('.left-slider__swiper', {
+	grabCursor: true,
+	spaceBetween: 30,
+	loop: true,
+	slidesPerView: 1,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true
+	},
+	speed: 700,
+});
+let sliderTwo = new Swiper('.right-slider__swiper', {
+	grabCursor: true,
+	spaceBetween: 30,
+	loop: true,
+	slidesPerView: 1,
+	navigation: {
+		nextEl: '.big-slider__next',
+		prevEl: '.big-slider__prev'
+	},
+	speed: 700,
+
+});
+
+sliderOne.controller.control = sliderTwo;
+sliderTwo.controller.control = sliderOne;
+
+new Swiper('.swiper-carousel', {
+	grabCursor: true,
+	spaceBetween: 0,
+	loop: true,
+	slidesPerView: 4,
+	speed: 700,
+	autoplay: true,
+	navigation: {
+		nextEl: '.swiper-carousel__button-next',
+		prevEl: '.swiper-carousel__button-prev'
+		
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		320: {
+			slidesPerView: 1,
+		},
+		540: {
+			slidesPerView: 2,
+		},
+		768: {
+			slidesPerView: 3,
+		},
+		1024: {
+			slidesPerView: 4,
+		}
+	},
 });
