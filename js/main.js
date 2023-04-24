@@ -326,7 +326,18 @@ new Swiper('.home-screen__swiper', {
 	rewind: true,
 	slidesPerView: 3,
 	autoplay: {
-		delay: 2000,
+		delay: 4000,
+	  },
+	  on: {
+		init() {
+		  this.el.addEventListener('mouseenter', () => {
+			this.autoplay.stop();
+		  });
+	
+		  this.el.addEventListener('mouseleave', () => {
+			this.autoplay.start();
+		  });
+		}
 	  },
 	breakpoints: {
 		0: {
@@ -382,7 +393,18 @@ new Swiper('.swiper-carousel', {
 	slidesPerView: 4,
 	speed: 700,
 	autoplay: {
-		delay: 2000,
+		delay: 4000,
+	  },
+	  on: {
+		init() {
+		  this.el.addEventListener('mouseenter', () => {
+			this.autoplay.stop();
+		  });
+	
+		  this.el.addEventListener('mouseleave', () => {
+			this.autoplay.start();
+		  });
+		}
 	  },
 	navigation: {
 		nextEl: '.swiper-carousel__button-next',
@@ -406,4 +428,38 @@ new Swiper('.swiper-carousel', {
 			slidesPerView: 4,
 		}
 	},
+});
+
+new Swiper('.about-project-swiper', {
+	grabCursor: true,
+	spaceBetween: 20,
+	loop: true,
+	slidesPerView: 2,
+	autoplay: {
+		delay: 4000,
+	  },
+	navigation: {
+		nextEl: '.about-project-button-next',
+		prevEl: '.about-project-button-prev'
+	},
+	speed: 700,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		1024: {
+			slidesPerView: 2,
+		}
+	},
+	on: {
+		init() {
+		  this.el.addEventListener('mouseenter', () => {
+			this.autoplay.stop();
+		  });
+	
+		  this.el.addEventListener('mouseleave', () => {
+			this.autoplay.start();
+		  });
+		}
+	  },
 });
