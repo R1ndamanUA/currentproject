@@ -325,6 +325,9 @@ new Swiper('.home-screen__swiper', {
 	loop: true,
 	rewind: true,
 	slidesPerView: 3,
+	autoplay: {
+		delay: 2000,
+	  },
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
@@ -378,7 +381,9 @@ new Swiper('.swiper-carousel', {
 	loop: true,
 	slidesPerView: 4,
 	speed: 700,
-	autoplay: true,
+	autoplay: {
+		delay: 2000,
+	  },
 	navigation: {
 		nextEl: '.swiper-carousel__button-next',
 		prevEl: '.swiper-carousel__button-prev'
