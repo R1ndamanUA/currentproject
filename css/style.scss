@@ -2807,10 +2807,10 @@ body {
 }
 //==========Big Slider==============================================================================================================================================
 .big-slider {
-    background-image: url(../img/index/bigSlider/sliderBG.webp);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+        url(../img/index/bigSlider/sliderBG.webp);
     background-repeat: no-repeat;
     background-size: cover;
-
     &__container {
         display: flex;
         @media (max-width: 767.98px) {
@@ -3765,9 +3765,5 @@ body {
 
     &__item-more-text {
         text-align: center;
-    }
-}
-.data-sources {
-    &__title {
     }
 }

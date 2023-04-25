@@ -2898,7 +2898,7 @@ body.lock {
 }
 
 .big-slider {
-  background-image: url(../img/index/bigSlider/sliderBG.webp);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)), url(../img/index/bigSlider/sliderBG.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
