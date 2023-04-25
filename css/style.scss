@@ -3840,15 +3840,15 @@ body {
 }
 //==========================================nominations-upper-screen==============================================================================================================
 .nominations-upper-screen {
-    background: url("../img/nominations/upperscreenbg2.jpg") 100% 100% no-repeat;
+    background: url("../img/nominations/upperscreenbg2.webp") 100% 100% no-repeat;
     position: relative;
     height: 750px;
     margin-bottom: 60px;
     background-position: center;
     @media (min-width: 1512px) {
         background-size: contain cover;
-        background: url("../img/nominations/womanupperscreen.png") 80% 100% no-repeat,
-            url("../img/nominations/upperscreenbg.jpg") 100% 100% no-repeat;
+        background: url("../img/nominations/womanupperscreen.webp") 80% 100% no-repeat,
+            url("../img/nominations/upperscreenbg.webp") 100% 100% no-repeat;
         background-size: contain, cover;
     }
     @media (max-width: 768px) {
