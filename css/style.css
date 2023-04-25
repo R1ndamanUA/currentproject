@@ -3341,6 +3341,7 @@ body.lock {
   padding: 40px 0px;
   background: url("../img/aboutProject/bgsearch-enterprise.webp") 0 0 no-repeat;
   background-size: cover;
+  background-position: bottom;
 }
 .about-project-enterprise-search__container {
   display: flex;
