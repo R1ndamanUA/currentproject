@@ -463,3 +463,72 @@ new Swiper('.about-project-swiper', {
 		}
 	  },
 });
+
+new Swiper('.nominations-slider__swiper', {
+	grabCursor: true,
+	loop: true,
+	slidesPerView: 1,
+	autoplay: {
+		delay: 4000,
+	  },
+	navigation: {
+		nextEl: '.about-project-button-next',
+		prevEl: '.about-project-button-prev'
+	},
+	speed: 700,
+	on: {
+		init() {
+		  this.el.addEventListener('mouseenter', () => {
+			this.autoplay.stop();
+		  });
+	
+		  this.el.addEventListener('mouseleave', () => {
+			this.autoplay.start();
+		  });
+		}
+	  },
+});
+
+new Swiper('.nominations-slider-gallery__swiper', {
+	grabCursor: true,
+	loop: true,
+	slidesPerView: 3,
+	spaceBetween: 20,
+	centeredSlides: true,
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		320: {
+			slidesPerView: 1,
+		},
+		540: {
+			slidesPerView: 2,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		1024: {
+			slidesPerView: 3,
+		}
+	},
+	autoplay: {
+		delay: 4000,
+	  },
+	navigation: {
+		nextEl: '.nominations-slider-gallery__next',
+		prevEl: '.nominations-slider-gallery__prev'
+	},
+	speed: 700,
+	on: {
+		init() {
+		  this.el.addEventListener('mouseenter', () => {
+			this.autoplay.stop();
+		  });
+	
+		  this.el.addEventListener('mouseleave', () => {
+			this.autoplay.start();
+		  });
+		}
+	  },
+});
