@@ -3700,7 +3700,7 @@ body.lock {
   grid-column: 2/3;
   max-width: 100%;
   object-fit: cover;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
   align-self: end;
   z-index: 2;
 }
