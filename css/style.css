@@ -3669,7 +3669,7 @@ body.lock {
 }
 
 .registries-upperscreen {
-  background: url("../img/registries/Фон.jpg") 0 -2px no-repeat;
+  background: url("../img/registries/bg3.webp") 0 -2px no-repeat;
   background-size: cover;
 }
 .registries-upperscreen__container {
@@ -3928,4 +3928,80 @@ body.lock {
 }
 .registries-stages__item-more-text {
   text-align: center;
+}
+
+.registries-advantages {
+  margin-bottom: 60px;
+}
+.registries-advantages__row {
+  display: flex;
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+@media (max-width: 767.98px) {
+  .registries-advantages__row {
+    flex-wrap: wrap;
+  }
+}
+.registries-advantages__image {
+  flex-basis: 50%;
+}
+@media (max-width: 767.98px) {
+  .registries-advantages__image {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+.registries-advantages__image img {
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.registries-advantages__body {
+  padding: 45px 80px 10px;
+  flex-basis: 50%;
+}
+@media (max-width: 1199.98px) {
+  .registries-advantages__body {
+    padding: 45px 60px 10px;
+  }
+}
+@media (max-width: 899.98px) {
+  .registries-advantages__body {
+    padding: 45px 20px 10px 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .registries-advantages__body {
+    flex-basis: 100%;
+    padding: 45px 40px 10px 60px;
+  }
+}
+.registries-advantages__body h2 {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 120%;
+  color: #081f62;
+  position: relative;
+}
+.registries-advantages__body h2::after {
+  content: "";
+  background: url(../img/registries/checkmark.svg) no-repeat;
+  width: 28px;
+  height: 21px;
+  position: absolute;
+  top: 4px;
+  left: -35px;
+}
+.registries-advantages__body p {
+  font-size: 16px;
+  line-height: 150%;
+  text-align: justify;
+  color: #000000;
+  padding: 10px 0px 35px 0px;
+}
+
+.about-project-enterprise-search--mb {
+  margin-bottom: 50px;
 }
