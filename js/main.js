@@ -1,3 +1,12 @@
+import Cookies from 'js-cookie'
+
+const COOKIE_NAME = 'visit'
+const cookieAlert = document.querySelector('.cookie-alert')
+
+if (!Cookies.get(COOKIE_NAME)) {
+	cookieAlert.classList.add('is-show')
+}
+
 // header burger =========================
 $(document).ready(function () {
 	$('.header__burger').click(function (event) {
@@ -532,3 +541,26 @@ new Swiper('.nominations-slider-gallery__swiper', {
 		}
 	  },
 });
+
+new Swiper('.data-sources__swiper', {
+	loop: true,
+	slidesPerView: 3,
+	spaceBetween: 20,
+	autoplay: {
+		delay: 0,
+	  },
+	speed: 2000,
+	on: {
+		init() {
+		  this.el.addEventListener('mouseenter', () => {
+			this.autoplay.stop();
+		  });
+	
+		  this.el.addEventListener('mouseleave', () => {
+			this.autoplay.start();
+		  });
+		}
+	  },
+});
+
+//=========COOKIE===============================================================================================================================================
