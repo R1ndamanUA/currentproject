@@ -1,10 +1,17 @@
-import Cookies from 'js-cookie'
 
 const COOKIE_NAME = 'visit'
 const cookieAlert = document.querySelector('.cookie-alert')
+const cookieBtn = document.querySelector('.cookie-alert-btn')
 
 if (!Cookies.get(COOKIE_NAME)) {
-	cookieAlert.classList.add('is-show')
+	setTimeout(() => {
+		cookieAlert.classList.add('is-show')
+	}, 1000);
+	cookieBtn.addEventListener('click', () => {
+		cookieAlert.classList.remove('is-show')
+
+		Cookies.set(COOKIE_NAME, true, { expires: 30 })
+	})
 }
 
 // header burger =========================
