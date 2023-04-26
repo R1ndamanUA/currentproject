@@ -4372,3 +4372,27 @@ body.lock {
   color: #141414;
   margin-bottom: 20px;
 }
+
+.privacy-policy__container {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  padding: 20px;
+}
+.privacy-policy__container h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+@media (max-width: 450px) {
+  .privacy-policy__container h1 {
+    font-size: 22px;
+  }
+}
+.privacy-policy__container h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.privacy-policy__container p {
+  margin-bottom: 10px;
+}
