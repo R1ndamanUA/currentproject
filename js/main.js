@@ -1,19 +1,3 @@
-
-const COOKIE_NAME = 'visit'
-const cookieAlert = document.querySelector('.cookie-alert')
-const cookieBtn = document.querySelector('.cookie-alert-btn')
-
-if (!Cookies.get(COOKIE_NAME)) {
-	setTimeout(() => {
-		cookieAlert.classList.add('is-show')
-	}, 1000);
-	cookieBtn.addEventListener('click', () => {
-		cookieAlert.classList.remove('is-show')
-
-		Cookies.set(COOKIE_NAME, true, { expires: 30 })
-	})
-}
-
 // header burger =========================
 $(document).ready(function () {
 	$('.header__burger').click(function (event) {
@@ -571,3 +555,18 @@ new Swiper('.data-sources__swiper', {
 });
 
 //=========COOKIE===============================================================================================================================================
+
+const COOKIE_NAME = 'visit'
+const cookieAlert = document.querySelector('.cookie-alert')
+const cookieBtn = document.querySelector('.cookie-alert-btn')
+
+if (!Cookies.get(COOKIE_NAME)) {
+	setTimeout(() => {
+		cookieAlert.classList.add('is-show')
+	}, 1000);
+	cookieBtn.addEventListener('click', () => {
+		cookieAlert.classList.remove('is-show')
+
+		Cookies.set(COOKIE_NAME, true, { expires: 30 })
+	})
+}
