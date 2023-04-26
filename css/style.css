@@ -2813,77 +2813,42 @@ body.lock {
   height: 100%;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(1100px);
-  }
-  100% {
-    transform: translateX(-2434px);
-  }
-}
-@keyframes scroll2 {
-  0% {
-    transform: translateX(768px);
-  }
-  100% {
-    transform: translateX(-2434px);
-  }
-}
-@keyframes scroll3 {
-  0% {
-    transform: translateX(468px);
-  }
-  100% {
-    transform: translateX(-2434px);
-  }
-}
-.slider {
-  background: transparent;
-  height: 85px;
-  margin: auto;
+.marquee-infinite {
+  max-width: 100%;
   overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-.slider::before, .slider::after {
-  background: linear-gradient(90deg, #eff1f6 28.13%, rgba(239, 241, 246, 0.75) 62.5%, rgba(239, 241, 246, 0) 100%);
-  content: "";
-  height: 85px;
-  position: absolute;
-  width: 70px;
-  z-index: 2;
-}
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-.slider::before {
-  left: 0;
-  top: 0;
-}
-.slider .slide-track {
-  animation: scroll 30s linear infinite;
-  display: flex;
-  width: 2434px;
-  gap: 60px;
-}
-@media (max-width: 767.98px) {
-  .slider .slide-track {
-    animation: scroll2 30s linear infinite;
-  }
-}
-@media (max-width: 467.98px) {
-  .slider .slide-track {
-    animation: scroll3 30s linear infinite;
-  }
-}
-.slider .slide {
-  height: 85px;
-  align-items: center;
-  display: flex;
 }
 
+/*Здесь можно поиграть со свойством width: mac-content*/
+.marquee-infinite div {
+  display: flex;
+  width: max-content;
+  animation: marquee-infinite 15s linear infinite;
+}
+
+.marquee-infinite span {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.marquee-infinite img {
+  width: 20%;
+  padding-right: 30px;
+  object-fit: contain;
+}
+
+.marquee-infinite:hover div {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-infinite {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .data-sources__container {
   margin-bottom: 60px;
 }
@@ -4139,6 +4104,11 @@ body.lock {
   font-size: 16px;
   line-height: 150%;
   color: #141414;
+}
+@media (max-width: 449.98px) {
+  .nominations-stages__row-body p {
+    text-align: justify;
+  }
 }
 
 .nominations-slider {

@@ -2712,83 +2712,43 @@ body {
     }
 }
 //===========Бегущая строка=============================================================================================================================================
-@mixin white-gradient {
-    background: linear-gradient(90deg, #eff1f6 28.13%, rgba(239, 241, 246, 0.75) 62.5%, rgba(239, 241, 246, 0) 100%);
-}
-// Animation
-@keyframes scroll {
-    0% {
-        transform: translateX(1100px);
-    }
-    100% {
-        transform: translateX(-2434px);
-    }
-}
-@keyframes scroll2 {
-    0% {
-        transform: translateX(768px);
-    }
-    100% {
-        transform: translateX(-2434px);
-    }
-}
-@keyframes scroll3 {
-    0% {
-        transform: translateX(468px);
-    }
-    100% {
-        transform: translateX(-2434px);
-    }
-}
-
-// Styling
-.slider {
-    background: transparent;
-    height: 85px;
-    margin: auto;
+.marquee-infinite {
+    max-width: 100%;
     overflow: hidden;
-    position: relative;
+}
+
+/*Здесь можно поиграть со свойством width: mac-content*/
+.marquee-infinite div {
+    display: flex;
+    width: max-content;
+    animation: marquee-infinite 15s linear infinite;
+}
+
+.marquee-infinite span {
     width: 100%;
-    &::before,
-    &::after {
-        @include white-gradient;
-        content: "";
-        height: 85px;
-        position: absolute;
-        width: 70px;
-        z-index: 2;
-    }
+    display: flex;
+    justify-content: space-around;
+}
 
-    &::after {
-        right: 0;
-        top: 0;
-        transform: rotateZ(180deg);
-    }
+.marquee-infinite img {
+    width: 20%;
+    padding-right: 30px;
+    object-fit: contain;
+}
 
-    &::before {
-        left: 0;
-        top: 0;
-    }
+.marquee-infinite:hover div {
+    animation-play-state: paused;
+}
 
-    .slide-track {
-        animation: scroll 30s linear infinite;
-        display: flex;
-        width: 2434px;
-        gap: 60px;
-        @media (max-width: 767.98px) {
-            animation: scroll2 30s linear infinite;
-        }
-        @media (max-width: 467.98px) {
-            animation: scroll3 30s linear infinite;
-        }
+@keyframes marquee-infinite {
+    0% {
+        transform: translateX(0%);
     }
-
-    .slide {
-        height: 85px;
-        align-items: center;
-        display: flex;
+    100% {
+        transform: translateX(-50%);
     }
 }
+
 //=============Data Sources===========================================================================================================================================
 .data-sources {
     &__container {
@@ -3965,6 +3925,9 @@ body {
             font-size: 16px;
             line-height: 150%;
             color: #141414;
+            @media (max-width: 449.98px) {
+                text-align: justify;
+            }
         }
     }
 }
@@ -4184,3 +4147,4 @@ body {
         margin-bottom: 20px;
     }
 }
+//========================================================================================================================================================
