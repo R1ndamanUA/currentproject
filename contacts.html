@@ -90,10 +90,10 @@
                         <h2>Задать вопросы</h2>
                         <form class="general-contacts__form" action="#" method="get">
                             <input tabindex="1" placeholder="Имя" type="text" name="contacts-form__name" value="" class="general-contacts__form-input">
-                            <input tabindex="2" placeholder="Телефон" type="text" name="contacts-form__phone" value="" class="general-contacts__form-input">
+                            <input tabindex="2" placeholder="Телефон" type="text" name="contacts-form__phone" value="" class="general-contacts__form-input phone-mask">
                             <input tabindex="3" placeholder="БИН или название компании" type="text" name="contacts-form__company-name" value="" class="general-contacts__form-input">
                             <textarea tabindex="4" placeholder="Ваш вопрос" name="contacts-form__text" value="" class="general-contacts__form-textarea"></textarea>
-                            <button tabindex="5" type="submit" class="general-contacts__form-button">Отправить</button>
+                            <button tabindex="5" onclick="alert('Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.');return true;" type="submit" class="general-contacts__form-button">Отправить</button>
                         </form>
                     </div>
                 </section>
@@ -101,7 +101,7 @@
                     <h2>Контакты руководителей направлений</h2>
                     <div class="contacts-managers__item">
                         <div class="contacts-managers__img">
-                            <img src="./img/contacts/Faevcov.jpg" alt="Фото руководителя направления">
+                            <img src="./img/contacts/Faevcov.webp" alt="Фото руководителя направления">
                         </div>
                         <div class="contacts-managers__body">
                             <h3>Вопросы сотрудничества и связь со СМИ</h3>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="contacts-managers__item">
                         <div class="contacts-managers__img">
-                            <img src="./img/contacts/Skripay.jpg" alt="Фото руководителя направления">
+                            <img src="./img/contacts/Skripay.webp" alt="Фото руководителя направления">
                         </div>
                         <div class="contacts-managers__body">
                             <h3>Организационные вопросы и предложения</h3>
@@ -123,18 +123,18 @@
                     </div>
                     <div class="contacts-managers__item">
                         <div class="contacts-managers__img">
-                            <img src="./img/contacts/Rimarenko.jpg" alt="Фото руководителя направления">
+                            <img src="./img/contacts/Rimarenko.webp" alt="Фото руководителя направления">
                         </div>
                         <div class="contacts-managers__body">
                             <h3>Вопросы международного сотрудничества</h3>
-                            <p class="contacts-managers__FIO">Римаренко Игорь Борисович</p>
+                            <p class="contacts-managers__FIO">Рымаренко Игорь Борисович</p>
                             <p class="contacts-managers__position">Председатель правления</p>
                             <a class="contacts-managers__email" href="mailto:iicc@niac.kz">E-mail: iicc@niac.kz</a>
                         </div>
                     </div>
                     <div class="contacts-managers__item">
                         <div class="contacts-managers__img">
-                            <img src="./img/contacts/analitic.jpg" alt="Фото руководителя направления">
+                            <img src="./img/contacts/analitic.webp" alt="Фото руководителя направления">
                         </div>
                         <div class="contacts-managers__body">
                             <h3>Заказать индивидуальную или отраслевую аналитику</h3>
@@ -223,5 +223,27 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="js/maska-nomera.js" type="text/javascript" ></script>
+
+    <script>
+$('.phone-mask').mask('+7 (999) 999-99-99');
+
+$.fn.setCursorPosition = function(pos) {
+if ($(this).get(0).setSelectionRange) {
+  $(this).get(0).setSelectionRange(pos, pos);
+} else if ($(this).get(0).createTextRange) {
+  var range = $(this).get(0).createTextRange();
+  range.collapse(true);
+  range.moveEnd('character', pos);
+  range.moveStart('character', pos);
+  range.select();
+}
+};
+
+
+$('input[type="tel"]').click(function(){
+  $(this).setCursorPosition(4);  // set position number
+});
+</script>
 </body>
 </html>
