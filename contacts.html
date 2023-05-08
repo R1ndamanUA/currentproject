@@ -93,7 +93,11 @@
                             <input tabindex="2" placeholder="Телефон" type="text" name="contacts-form__phone" value="" class="general-contacts__form-input phone-mask">
                             <input tabindex="3" placeholder="БИН или название компании" type="text" name="contacts-form__company-name" value="" class="general-contacts__form-input">
                             <textarea tabindex="4" placeholder="Ваш вопрос" name="contacts-form__text" value="" class="general-contacts__form-textarea"></textarea>
-                            <button tabindex="5" onclick="alert('Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.');return true;" type="submit" class="general-contacts__form-button">Отправить</button>
+                            <label>
+                                <input checked tabindex="4" type="checkbox" name="" value="">
+                                <a href="https://niac.kz/privacypolicy">Я даю согласие на обработку предоставленных данных</a>
+                            </label>
+                            <button tabindex="5" type="submit" class="general-contacts__form-button open-popup">Отправить</button>
                         </form>
                     </div>
                 </section>
@@ -143,6 +147,12 @@
                         </div>
                     </div>
                 </section>
+            </div>
+            <div class="form-pop-up-bg">
+                <div class="form-pop-up">
+                    <p>Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.</p>
+                    <button class="close-popup">Закрыть</button>
+                </div>
             </div>
         </main>
         <footer class="footer">

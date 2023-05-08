@@ -87,7 +87,7 @@
                 </div>
             </section>
             <section class="about-project-enterprise-search">
-                <div class="about-project-enterprise-search__container">
+                <div class="about-project-enterprise-search__container _hide _anim-items _anim-no-hide">
                     <h2>Поиск предприятия</h2>
                     <form action="#" method="get">
                         <input tabindex="1" placeholder="Введите БИН или название компании" type="text" name="BIN" value="" class="about-project-enterprise-search__input">
@@ -115,11 +115,11 @@
                             <img src="./img/aboutProject/image1.webp" alt="Люди с грамотами">
                         </div>
                         <div class="about-project-partners__body">
-                            <h2>Наша миссия</h2>
-                            <p>Предоставить независимую оценку деятельности предприятий, способствовать повышению имиджа и узнаваемости передовых организаций Республики Казахстан как на национальном, так и на международном уровне.</p>
+                            <h2 class="_hide _anim-items _anim-no-hide">Наша миссия</h2>
+                            <p class="_hide _anim-items _anim-no-hide">Предоставить независимую оценку деятельности предприятий, способствовать повышению имиджа и узнаваемости передовых организаций Республики Казахстан как на национальном, так и на международном уровне.</p>
                             <br>
-                            <h2>Наша цель</h2>
-                            <p>Создать открытый информационно-аналитический портал для проверки надежных контрагентов, определить и отметить благонадежные предприятия.</p>
+                            <h2 class="_hide _anim-items _anim-no-hide">Наша цель</h2>
+                            <p class="_hide _anim-items _anim-no-hide">Создать открытый информационно-аналитический портал для проверки надежных контрагентов, определить и отметить благонадежные предприятия.</p>
                         </div>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                                 <input tabindex="5" type="checkbox" name="" value="" checked>
                                 <a href="https://niac.kz/privacypolicy">Я даю согласие на обработку предоставленных данных</a>
                             </label>
-                            <button tabindex="6" type="submit" onclick="alert('Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.');return true;" class="suggestions__form-button">Отправить</button>
+                            <button tabindex="6" type="submit" class="suggestions__form-button open-popup">Отправить</button>
                         </form>
                     </div>
                     <div class="suggestions__image">
@@ -187,6 +187,12 @@
             <div class="cookie-alert">
                 <p>Используя наш сайт, вы соглашаетесь, что мы можем хранить куки (cookies) в вашем браузере. <a href="https://niac.kz/privacypolicy">Узнать больше</a></p>
                 <button class="cookie-alert-btn">Закрыть</button>
+            </div>
+            <div class="form-pop-up-bg">
+                <div class="form-pop-up">
+                    <p>Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.</p>
+                    <button class="close-popup">Закрыть</button>
+                </div>
             </div>
         </main>
         <footer class="footer">

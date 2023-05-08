@@ -387,7 +387,7 @@
                         <form class="not-included__form" action="#" method="get">
                             <input tabindex="1" placeholder="Имя" type="text" name="not-included__name" value="" class="not-included__form-input">
                             <input tabindex="2" placeholder="Телефон" type="text" name="not-included__phone" value="" class="not-included__form-input phone-mask">
-                            <button tabindex="3" onclick="alert('Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.');return true;" type="submit" class="not-included__button">Оставить заявку</button>
+                            <button class="not-included__button open-popup" tabindex="3" type="submit" >Оставить заявку</button>
                         </form>
                     </section>
                     <section class="content__security-clearance security-clearance">
@@ -491,6 +491,12 @@
                     </aside>
                 </div>
             </div>
+            <div class="form-pop-up-bg">
+                <div class="form-pop-up">
+                    <p>Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.</p>
+                    <button class="close-popup">Закрыть</button>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__container">
@@ -580,7 +586,7 @@
                     <form class="popup__form" action="#" method="get">
                         <input tabindex="1" placeholder="Имя" type="text" name="popup__name" value="" class="popup__form-input">
                         <input tabindex="2" placeholder="Телефон" type="text" name="popup__phone" value="" class="popup__form-input phone-mask">
-                        <button tabindex="3" onclick="alert('Спасибо, Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.');return true;" type="submit" class="popup__button">Оставить заявку</button>
+                        <button tabindex="3" type="submit" class="popup__button open-popup">Оставить заявку</button>
                     </form>
                     <div class="popup__image">
                         <img src="./img/popup/Rectangle60.webp" alt="Image">
