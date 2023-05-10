@@ -292,9 +292,17 @@ textarea {
   line-height: 17px;
   text-align: center;
   color: #fbfbfb;
+  border: 1px solid #081f62;
+  transition: all 0.5s ease;
 }
 .no-scroll {
   overflow-y: hidden;
+}
+.form-pop-up button:hover {
+  background: #fbfbfb;
+  color: #081f62;
+  border: 1px solid #081f62;
+  transition: all 0.5s ease;
 }
 /* =======END POP UP FORM================================================================================================================================================= */
 
