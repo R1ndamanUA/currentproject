@@ -744,6 +744,26 @@ new Swiper('.data-sources__swiper', {
 		}
 	  },
 });
+//========Interactive Map================================================================================================================================================
+let tooltip = document.querySelector('.tooltip');
+let continents = document.querySelectorAll('.continent');
+
+continents.forEach(continent => {
+	continent.addEventListener('mousemove', function(e) {
+		tooltip.innerText = this.dataset.tooltip;
+		tooltip.style.top = (e.y + 20) + 'px';
+		tooltip.style.left = (e.x + 20) + 'px';
+	});
+
+	continent.addEventListener('mouseenter', function() {
+		tooltip.style.display = 'block';
+	});
+
+	continent.addEventListener('mouseleave', function() {
+		tooltip.style.display = 'none';
+	});
+});
+
 //=========COOKIE===============================================================================================================================================
 
 const COOKIE_NAME = 'visit'
