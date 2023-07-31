@@ -5,7 +5,37 @@ $(document).ready(function () {
 		$('body').toggleClass('lock');
 	});
 });
+//======FAQ ACCRODION==================================================================================================================================================
+document.querySelectorAll('.faq__item-question').forEach((el) => {
+	el.addEventListener('click', () => {
 
+		let answer = el.nextElementSibling;
+
+		if (answer.classList.contains('faq-show')) {
+			document.querySelectorAll('.faq__item-answer').forEach((el) => el.classList.remove('faq-show'));
+		} else {
+			document.querySelectorAll('.faq__item-answer').forEach((el) => el.classList.remove('faq-show'));
+			answer.classList.add('faq-show');
+		}
+	})
+})
+
+// + справа в вопросе.
+document.querySelectorAll('.faq__item-question').forEach((el) => {
+	el.addEventListener('click', () => {
+		document.querySelectorAll('.faq__item-question').forEach((otherEl) => {
+			if (el !== otherEl) {
+				otherEl.style.setProperty('--rotate-degree', '90deg');
+			}
+		});
+
+		if (getComputedStyle(el).getPropertyValue('--rotate-degree') === '0deg') {
+			el.style.setProperty('--rotate-degree', '90deg');
+		} else {
+			el.style.setProperty('--rotate-degree', '0deg');
+		}
+	});
+});
 // lenguage drop menu ======================
 $(document).ready(function () {
 	$('.lang_current').click(function () {
@@ -235,7 +265,7 @@ tabBtn.forEach(function (element) {
 function openTabs(evt) {
 	const btnTarget = evt.currentTarget;
 	const item = btnTarget.dataset.item;
-	var item_0 = btnTarget.dataset.item+'0';
+	var item_0 = btnTarget.dataset.item + '0';
 	tabContents.forEach(function (item) {
 		item.classList.remove("tab__item--active");
 	});
@@ -251,75 +281,75 @@ function openTabs(evt) {
 }
 
 
-$('.popup__button').on('click', function(e){
-    e.preventDefault();
-    var name = $('input[name="popup__name"]').val();
-    var phone = $('input[name="popup__phone"]').val();
+$('.popup__button').on('click', function (e) {
+	e.preventDefault();
+	var name = $('input[name="popup__name"]').val();
+	var phone = $('input[name="popup__phone"]').val();
 	var link = $('input[name="link"]').val();
-    if($('input[name="popup__name"]').val()){
-      name = $('input[name="popup__name"]').val();
-    }else{
+	if ($('input[name="popup__name"]').val()) {
+		name = $('input[name="popup__name"]').val();
+	} else {
 		name = '-';
-    }
-    if($('input[name="popup__phone"]').val()){
-		phone =$('input[name="popup__phone"]').val();
-    }else{
+	}
+	if ($('input[name="popup__phone"]').val()) {
+		phone = $('input[name="popup__phone"]').val();
+	} else {
 		phone = '-';
-    }
-    $.ajax({
-        type: "POST",
-        url: "class/send.php",
-        data: { "name": name, "phone": phone, "bin" : window.location.href.replace('https://results.niac.kz/',''), link: window.location.href},
-        success: function(data) {
-          $('.popup__form')[0].reset();
-          popupClose();
-        }
-    });
-  });
-  $('.not-included__button').on('click', function(e){
-    e.preventDefault();
-    var name = $('input[name="not-included__name"]').val();
-    var phone = $('input[name="not-included__phone"]').val();
-	var link = $('input[name="link"]').val();
-    if($('input[name="not-included__name"]').val()){
-      name = $('input[name="not-included__name"]').val();
-    }else{
-		name = '-';
-    }
-    if($('input[name="not-included__phone"]').val()){
-		phone =$('input[name="not-included__phone"]').val();
-    }else{
-		phone = '-';
-    }
-    $.ajax({
-        type: "POST",
-        url: "class/send.php",
-        data: { "name": name, "phone": phone, "bin" : window.location.href.replace('https://results.niac.kz/',''), link: window.location.href},
-        success: function(data) {
-          $('.not-included__form')[0].reset();
-        }
-    });
-  });
-
-$(document).ready(function($){
-var copy_url = document.location.href;
-new Clipboard('.copy_link', {text: function(){ return copy_url;}});
+	}
+	$.ajax({
+		type: "POST",
+		url: "class/send.php",
+		data: { "name": name, "phone": phone, "bin": window.location.href.replace('https://results.niac.kz/', ''), link: window.location.href },
+		success: function (data) {
+			$('.popup__form')[0].reset();
+			popupClose();
+		}
+	});
 });
-$(document).ready(function() {
-    $('.fb-share').click(function(e) {
-        e.preventDefault();
-        window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
-        return false;
-    });
+$('.not-included__button').on('click', function (e) {
+	e.preventDefault();
+	var name = $('input[name="not-included__name"]').val();
+	var phone = $('input[name="not-included__phone"]').val();
+	var link = $('input[name="link"]').val();
+	if ($('input[name="not-included__name"]').val()) {
+		name = $('input[name="not-included__name"]').val();
+	} else {
+		name = '-';
+	}
+	if ($('input[name="not-included__phone"]').val()) {
+		phone = $('input[name="not-included__phone"]').val();
+	} else {
+		phone = '-';
+	}
+	$.ajax({
+		type: "POST",
+		url: "class/send.php",
+		data: { "name": name, "phone": phone, "bin": window.location.href.replace('https://results.niac.kz/', ''), link: window.location.href },
+		success: function (data) {
+			$('.not-included__form')[0].reset();
+		}
+	});
+});
+
+$(document).ready(function ($) {
+	var copy_url = document.location.href;
+	new Clipboard('.copy_link', { text: function () { return copy_url; } });
+});
+$(document).ready(function () {
+	$('.fb-share').click(function (e) {
+		e.preventDefault();
+		window.open($(this).attr('href'), 'fbShareWindow', 'height=450, width=550, top=' + ($(window).height() / 2 - 275) + ', left=' + ($(window).width() / 2 - 225) + ', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+		return false;
+	});
 });
 
 //======PopUP form done==================================================================================================================================================
-$('.open-popup').click(function(e) {
+$('.open-popup').click(function (e) {
 	e.preventDefault();
 	$('.form-pop-up-bg').fadeIn(600);
 	$('html').addClass('no-scroll');
 });
-$('.close-popup').click(function(e) {
+$('.close-popup').click(function (e) {
 	e.preventDefault();
 	$('.form-pop-up-bg').fadeOut(600);
 	$('html').removeClass('no-scroll');
@@ -329,11 +359,11 @@ $('.form-pop-up-bg').click(function (e) {
 		$('.form-pop-up-bg').fadeOut(600);
 		$('html').removeClass('no-scroll');
 	}
-  });
+});
 //========================================================================================================================================================
-$(".nominations-upper-screen__button").click(function() {
+$(".nominations-upper-screen__button").click(function () {
 	$('html, body').animate({
-	scrollTop: $(".participation-application__container").offset().top 
+		scrollTop: $(".participation-application__container").offset().top
 	}, 1000);
 });
 
@@ -341,68 +371,68 @@ $(".nominations-upper-screen__button").click(function() {
 (function ($) {
 	$.fn.countTo = function (options) {
 		options = options || {};
-		
+
 		return $(this).each(function () {
 			// set options for current element
 			var settings = $.extend({}, $.fn.countTo.defaults, {
-				from:            $(this).data('from'),
-				to:              $(this).data('to'),
-				speed:           $(this).data('speed'),
+				from: $(this).data('from'),
+				to: $(this).data('to'),
+				speed: $(this).data('speed'),
 				refreshInterval: $(this).data('refresh-interval'),
-				decimals:        $(this).data('decimals')
+				decimals: $(this).data('decimals')
 			}, options);
-			
+
 			// how many times to update the value, and how much to increment the value on each update
 			var loops = Math.ceil(settings.speed / settings.refreshInterval),
 				increment = (settings.to - settings.from) / loops;
-			
+
 			// references & variables that will change with each update
 			var self = this,
 				$self = $(this),
 				loopCount = 0,
 				value = settings.from,
 				data = $self.data('countTo') || {};
-			
+
 			$self.data('countTo', data);
-			
+
 			// if an existing interval can be found, clear it first
 			if (data.interval) {
 				clearInterval(data.interval);
 			}
 			data.interval = setInterval(updateTimer, settings.refreshInterval);
-			
+
 			// initialize the element with the starting value
 			render(value);
-			
+
 			function updateTimer() {
 				value += increment;
 				loopCount++;
-				
+
 				render(value);
-				
-				if (typeof(settings.onUpdate) == 'function') {
+
+				if (typeof (settings.onUpdate) == 'function') {
 					settings.onUpdate.call(self, value);
 				}
-				
+
 				if (loopCount >= loops) {
 					// remove the interval
 					$self.removeData('countTo');
 					clearInterval(data.interval);
 					value = settings.to;
-					
-					if (typeof(settings.onComplete) == 'function') {
+
+					if (typeof (settings.onComplete) == 'function') {
 						settings.onComplete.call(self, value);
 					}
 				}
 			}
-			
+
 			function render(value) {
 				var formattedValue = settings.formatter.call(self, value, settings);
 				$self.html(formattedValue);
 			}
 		});
 	};
-	
+
 	$.fn.countTo.defaults = {
 		from: 0,               // the number the element should start at
 		to: 0,                 // the number the element should end at
@@ -413,7 +443,7 @@ $(".nominations-upper-screen__button").click(function() {
 		onUpdate: null,        // callback method for every time the element is updated
 		onComplete: null       // callback method for when the element finishes updating
 	};
-	
+
 	function formatter(value, settings) {
 		return value.toFixed(settings.decimals);
 	}
@@ -421,32 +451,32 @@ $(".nominations-upper-screen__button").click(function() {
 
 function countCallback() {
 	jQuery(function ($) {
-	  // custom formatting example
-	  $('.count-number').data('countToOptions', {
-		formatter: function (value, options) {
-		  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
-		}
-	  });
+		// custom formatting example
+		$('.count-number').data('countToOptions', {
+			formatter: function (value, options) {
+				return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ' ');
+			}
+		});
 
-	  // start all the timers
-	  $('.timer').each(count);  
-	  
-	  function count(options) {
-		var $this = $(this);
-		options = $.extend({}, options || {}, $this.data('countToOptions') || {});
-		$this.countTo(options);
-	  }
+		// start all the timers
+		$('.timer').each(count);
+
+		function count(options) {
+			var $this = $(this);
+			options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+			$this.countTo(options);
+		}
 	});
 };
 
 // Детектить скролл до элемента elem, вернет true или falsee.
 // Параметр elem - подставляешь элемент, которые будет в зоне видимости.
 function isScrolledIntoView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+	var docViewTop = $(window).scrollTop();
+	var docViewBottom = docViewTop + $(window).height();
+	var elemTop = $(elem).offset().top;
+	var elemBottom = elemTop + $(elem).height();
+	return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
 }
 
 function runCounter() {
@@ -509,7 +539,7 @@ new Swiper('.home-screen__swiper', {
 	navigation: {
 		nextEl: '.home-screen__slider-next',
 		prevEl: '.home-screen__slider-prev'
-		
+
 	},
 	grabCursor: true,
 	spaceBetween: 26,
@@ -518,18 +548,18 @@ new Swiper('.home-screen__swiper', {
 	slidesPerView: 3,
 	autoplay: {
 		delay: 4000,
-	  },
-	  on: {
+	},
+	on: {
 		init() {
-		  this.el.addEventListener('mouseenter', () => {
-			this.autoplay.stop();
-		  });
-	
-		  this.el.addEventListener('mouseleave', () => {
-			this.autoplay.start();
-		  });
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
 		}
-	  },
+	},
 	breakpoints: {
 		0: {
 			slidesPerView: 1,
@@ -585,22 +615,22 @@ new Swiper('.swiper-carousel', {
 	speed: 700,
 	autoplay: {
 		delay: 4000,
-	  },
-	  on: {
+	},
+	on: {
 		init() {
-		  this.el.addEventListener('mouseenter', () => {
-			this.autoplay.stop();
-		  });
-	
-		  this.el.addEventListener('mouseleave', () => {
-			this.autoplay.start();
-		  });
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
 		}
-	  },
+	},
 	navigation: {
 		nextEl: '.swiper-carousel__button-next',
 		prevEl: '.swiper-carousel__button-prev'
-		
+
 	},
 	breakpoints: {
 		0: {
@@ -628,7 +658,7 @@ new Swiper('.about-project-swiper', {
 	slidesPerView: 2,
 	autoplay: {
 		delay: 4000,
-	  },
+	},
 	navigation: {
 		nextEl: '.about-project-button-next',
 		prevEl: '.about-project-button-prev'
@@ -644,15 +674,15 @@ new Swiper('.about-project-swiper', {
 	},
 	on: {
 		init() {
-		  this.el.addEventListener('mouseenter', () => {
-			this.autoplay.stop();
-		  });
-	
-		  this.el.addEventListener('mouseleave', () => {
-			this.autoplay.start();
-		  });
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
 		}
-	  },
+	},
 });
 
 new Swiper('.nominations-slider__swiper', {
@@ -661,7 +691,7 @@ new Swiper('.nominations-slider__swiper', {
 	slidesPerView: 1,
 	autoplay: {
 		delay: 4000,
-	  },
+	},
 	navigation: {
 		nextEl: '.about-project-button-next',
 		prevEl: '.about-project-button-prev'
@@ -669,15 +699,15 @@ new Swiper('.nominations-slider__swiper', {
 	speed: 700,
 	on: {
 		init() {
-		  this.el.addEventListener('mouseenter', () => {
-			this.autoplay.stop();
-		  });
-	
-		  this.el.addEventListener('mouseleave', () => {
-			this.autoplay.start();
-		  });
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
 		}
-	  },
+	},
 });
 
 new Swiper('.nominations-slider-gallery__swiper', {
@@ -705,7 +735,7 @@ new Swiper('.nominations-slider-gallery__swiper', {
 	},
 	autoplay: {
 		delay: 4000,
-	  },
+	},
 	navigation: {
 		nextEl: '.nominations-slider-gallery__next',
 		prevEl: '.nominations-slider-gallery__prev'
@@ -713,15 +743,15 @@ new Swiper('.nominations-slider-gallery__swiper', {
 	speed: 700,
 	on: {
 		init() {
-		  this.el.addEventListener('mouseenter', () => {
-			this.autoplay.stop();
-		  });
-	
-		  this.el.addEventListener('mouseleave', () => {
-			this.autoplay.start();
-		  });
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
 		}
-	  },
+	},
 });
 
 new Swiper('.data-sources__swiper', {
@@ -730,36 +760,36 @@ new Swiper('.data-sources__swiper', {
 	spaceBetween: 20,
 	autoplay: {
 		delay: 0,
-	  },
+	},
 	speed: 2000,
 	on: {
 		init() {
-		  this.el.addEventListener('mouseenter', () => {
-			this.autoplay.stop();
-		  });
-	
-		  this.el.addEventListener('mouseleave', () => {
-			this.autoplay.start();
-		  });
+			this.el.addEventListener('mouseenter', () => {
+				this.autoplay.stop();
+			});
+
+			this.el.addEventListener('mouseleave', () => {
+				this.autoplay.start();
+			});
 		}
-	  },
+	},
 });
 //========Interactive Map================================================================================================================================================
 let tooltip = document.querySelector('.tooltip');
 let continents = document.querySelectorAll('.continent');
 
 continents.forEach(continent => {
-	continent.addEventListener('mousemove', function(e) {
+	continent.addEventListener('mousemove', function (e) {
 		tooltip.innerText = this.dataset.tooltip;
 		tooltip.style.top = (e.y + 20) + 'px';
 		tooltip.style.left = (e.x + 20) + 'px';
 	});
 
-	continent.addEventListener('mouseenter', function() {
+	continent.addEventListener('mouseenter', function () {
 		tooltip.style.display = 'block';
 	});
 
-	continent.addEventListener('mouseleave', function() {
+	continent.addEventListener('mouseleave', function () {
 		tooltip.style.display = 'none';
 	});
 });
