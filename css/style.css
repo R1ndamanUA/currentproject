@@ -461,10 +461,6 @@ textarea {
   box-shadow: none;
 }
 
-.header--green {
-  background: #0b4b49;
-}
-
 .fi {
   margin-right: 10px;
 }
@@ -550,11 +546,6 @@ textarea {
 
 .footer {
   background: #081f62;
-}
-
-.footer--green {
-  background: #0b4b49;
-  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .footer__body {
@@ -4476,9 +4467,7 @@ textarea {
   line-height: 120%;
   color: #081f62;
 }
-.nominations-slider__body--green h2 {
-  color: #0b4b49;
-}
+
 .nominations-slider__body p {
   font-weight: 400;
   font-size: 16px;
@@ -4758,7 +4747,7 @@ textarea {
     padding: 20px 15px 26px;
   }
 }
-/* Company of year */
+/* Company of year ========================================================*/
 .top-screen {
   position: relative;
   background: radial-gradient(
@@ -4820,8 +4809,6 @@ textarea {
 .top-screen__button:hover {
   scale: 1.05;
   transition: all ease 0.5s;
-}
-.top-screen__empty {
 }
 .top-screen__reward-img {
   position: absolute;
@@ -4886,7 +4873,6 @@ textarea {
 .mission-and-target__body {
   flex-basis: 50%;
   display: flex;
-  /* padding: 90px 60px 60px 60px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -4942,8 +4928,6 @@ textarea {
 .stages {
   position: relative;
   z-index: 2;
-}
-.stages__container {
 }
 .stages__wrapper {
   border-radius: 4px;
@@ -5049,12 +5033,6 @@ textarea {
 .stages__scheme-stage1 {
   gap: 20px;
 }
-.stages__scheme-stage2 {
-}
-.stages__scheme-stage3 {
-}
-.stages__scheme-stage4 {
-}
 .stages__scheme-stage5 img {
   max-width: 100%;
 }
@@ -5091,8 +5069,6 @@ textarea {
     flex-wrap: wrap;
   }
 }
-.advantages {
-}
 .advantages__container {
   position: relative;
   z-index: 2;
@@ -5112,10 +5088,6 @@ textarea {
   padding: 30px;
   gap: 30px;
   align-items: center;
-}
-.advantages__item-icon {
-}
-.advantages__item-body {
 }
 .advantages__item-body h3 {
   color: #0b4b49;
@@ -5155,8 +5127,6 @@ textarea {
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% auto;
-}
-.feedback__container {
 }
 .feedback__wrapper {
   display: flex;
@@ -5198,8 +5168,6 @@ textarea {
   font-weight: 500;
   line-height: 16.549px; /* 137.908% */
   text-decoration-line: underline;
-}
-.phone-mask {
 }
 .feedback__form-button {
   border-radius: 4px;
@@ -5269,4 +5237,14 @@ textarea {
   .feedback__body {
     padding: 25px;
   }
+}
+.header--green {
+  background: #0b4b49;
+}
+.nominations-slider__body--green h2 {
+  color: #0b4b49;
+}
+.footer--green {
+  background: #0b4b49;
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
 }
