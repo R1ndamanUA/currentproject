@@ -400,6 +400,9 @@ textarea {
     display: flex;
     justify-content: center;
   }
+  .header__menu--green {
+    background: #0b4b49;
+  }
 }
 .header__menu.active {
   top: 0;
