@@ -559,11 +559,11 @@ textarea {
   flex-wrap: wrap;
 }
 .footer__reward {
-  padding-right: 84px;
+  /* padding-right: 84px; */
   padding-top: 30px;
 }
 .footer__reward img {
-  max-width: 120px;
+  max-width: 200px;
 }
 @media (max-width: 929.8px) {
   .footer__reward {
