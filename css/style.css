@@ -655,7 +655,7 @@ textarea {
 .contacts-footer {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
 }
 .contacts-footer a:hover {
   text-decoration: underline;
@@ -4788,11 +4788,16 @@ textarea {
   line-height: 120%; /* 52.8px */
   text-align: center;
   -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-box-decoration-break: clone;
-    background-image: linear-gradient(to bottom, rgba(253, 237, 179, 1), rgba(255, 206, 122, 1), rgba(255, 241, 176, 1));
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(253, 237, 179, 1),
+    rgba(255, 206, 122, 1),
+    rgba(255, 241, 176, 1)
+  );
 }
-}
+
 .top-screen__text {
   text-align: center;
   font-size: 16px;
