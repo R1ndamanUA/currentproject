@@ -28,7 +28,17 @@
                             <li class="menu__item"><a href="https://niac.kz/" class="menu__link">Главная</a></li>
                             <li class="menu__item"><a href="https://niac.kz/about-us" class="menu__link">О проекте</a></li>
                             <li class="menu__item"><a href="https://niac.kz/registers" class="menu__link">Реестры</a></li>
-                            <li class="menu__item"><a href="https://niac.kz/nominations" class="menu__link">Номинации</a></li>
+                            <li class="menu__item">
+                                <a style="pointer-events: none" href="https://niac.kz/nominations" class="menu__link">Номинации</a>
+                                <ul class="menu__sub-list">
+                                    <li class="menu__sub-item">
+                                        <a href="https://niac.kz/nominations" class="menu__sub-link menu__link">Достояние отрасли</a>
+                                    </li>
+                                    <li class="menu__sub-item">
+                                        <a href="https://niac.kz/companyoftheyear" class="menu__sub-link menu__link">Компания года 2022</a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li class="menu__item"><a href="https://blog.niac.kz/" class="menu__link">Новости</a></li>
                             <li class="menu__item"><a href="https://niac.kz/contacts" class="menu__link">Контакты</a></li>
                         </ul>
@@ -236,7 +246,7 @@
                         <div class="about-project-button-prev"></div>
                         <div class="about-project-button-next"></div>
                     </div>
-                    <div class="button-wrapper"><button class="nominations-upper-screen__button nominations-upper-screen__button--green">Оставить заявку</button></div>
+                    <div class="button-wrapper"><a href="#CompanyOfYear-form" class="nominations-upper-screen__button nominations-upper-screen__button--green">Оставить заявку</a></div>
                 </div>
                 <img class="decor-image1" src="./img/companyoftheyear/gold-lines1.png" alt="decor">
             </section>
@@ -315,7 +325,7 @@
                     </div>
                 </div>
             </section>
-            <section class="feedback">
+            <section id="CompanyOfYear-form" class="feedback">
                 <div class="feedback__container">
                     <div class="data-sources__title data-sources__title--green"><h2>ОСТАВИТЬ ЗАЯВКУ ДЛЯ УЧАСТИЯ</h2></div>
                     <div class="feedback__wrapper">

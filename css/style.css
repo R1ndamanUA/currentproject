@@ -5349,3 +5349,42 @@ textarea {
   border-color: #0b4b49;
   background-color: transparent;
 }
+/* HEADER SUB MENU */
+.menu__list > li {
+  position: relative;
+}
+.menu__sub-list {
+  position: absolute;
+  top: 100%;
+  left: -65%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #0b4b49;
+  padding: 15px;
+  min-width: 200px;
+  transform: translate(0px, 10%);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .menu__sub-list {
+    left: -42%;
+  }
+}
+.menu__list > li:hover .menu__sub-list {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0px, 0px);
+  z-index: 2;
+}
+.menu__sub-item {
+  text-align: center;
+}
+.menu__sub-item:not(:last-child) {
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+}
+.menu__link {
+}
