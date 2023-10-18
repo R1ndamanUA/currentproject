@@ -696,7 +696,7 @@ new Swiper('.nominations-slider__swiper', {
 		nextEl: '.about-project-button-next',
 		prevEl: '.about-project-button-prev'
 	},
-	speed: 700,
+	speed: 1100,
 	on: {
 		init() {
 			this.el.addEventListener('mouseenter', () => {
@@ -773,6 +773,18 @@ new Swiper('.data-sources__swiper', {
 			});
 		}
 	},
+});
+
+new Swiper('.sidebar-slider__swiper', { // ищем слайдер превью по селектору
+	// задаем параметры
+	loop: true,
+	autoplay: {
+		delay: 2000,
+	},
+	speed: 2000,
+	slidesPerView: 1, 
+	freeMode: true, // при перетаскивании превью ведет себя как при скролле
+	grabCursor: true, // менять иконку курсора
 });
 //========Interactive Map================================================================================================================================================
 let tooltip = document.querySelector('.tooltip');
