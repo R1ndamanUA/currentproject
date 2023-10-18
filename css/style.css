@@ -1662,7 +1662,6 @@ textarea {
 .popup.open .popup__content {
   opacity: 1;
   transform: translate(0px, 0px);
-  z-index: 4;
 }
 
 .popup {
@@ -1681,6 +1680,7 @@ textarea {
 .popup.open {
   opacity: 1;
   visibility: visible;
+  z-index: 4;
 }
 .popup__body {
   min-height: 100%;
@@ -5399,7 +5399,7 @@ textarea {
 }
 .banner2 {
   height: 442px;
-  background: url("../img/sidebar/banner-sidebar-2.webp") 0 0 no-repeat;
+  background: url("../img/sidebar/banner-sidebar-3.jpg") 0 0 no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
