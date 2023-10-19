@@ -5397,12 +5397,28 @@ textarea {
 .sidebar-slider__wrapper {
   position: relative;
 }
+.sidebar-slider__swiper-slide {
+  border-radius: 3.67px;
+}
 .banner2 {
   height: 442px;
-  background: url("../img/sidebar/banner-sidebar-3.jpg") 0 0 no-repeat;
+  background: url("../img/sidebar/banner-sidebar-3.webp") 0 0 no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: end;
+}
+
+.request__button--gold {
+  background: linear-gradient(
+    to right,
+    #e5b352 0%,
+    #f4d08d 49%,
+    #f4d08d 51%,
+    #e5b352 100%
+  );
+  border: none;
+  color: #000;
+  padding: 12px 20px;
 }
 /* END Slider Company card */
